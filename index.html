@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Storyboard Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TikTok Storyboard Generator</h1>
+        
+        <div class="api-section">
+            <div class="api-input">
+                <input 
+                    type="password" 
+                    id="apiKeyInput" 
+                    placeholder="Enter your OpenRouter API key"
+                >
+                <button id="saveApiKey">Save Key</button>
+                <button id="resetApiKey">Reset Key</button>
+            </div>
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="ms">Bahasa Malaysia</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="theme-toggle">
+            <button id="themeToggle" aria-label="Toggle theme">
+                <span class="light-icon">☀️</span>
+                <span class="dark-icon">🌙</span>
+            </button>
+        </div>
+        
+        <div class="input-section">
+            <textarea 
+                id="promptInput" 
+                placeholder="Enter your TikTok video concept here (e.g., 'Create a 60-second TikTok about morning productivity hacks')"
+                rows="4"
+            ></textarea>
+            <button id="generateBtn">Generate Storyboard</button>
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Generating your storyboard...</p>
+        </div>
+
+        <div id="outputSection" class="output-section hidden">
+            <div class="output-header">
+                <h2>Generated Storyboard</h2>
+                <button id="copyBtn">Copy All</button>
+            </div>
+            <div id="storyboardTable" class="storyboard-table"></div>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+    </div>
+    <footer class="footer">
+        <p>© 2025 hanafihassan.com All Rights Reserved <span class="transformers">🤖</span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
